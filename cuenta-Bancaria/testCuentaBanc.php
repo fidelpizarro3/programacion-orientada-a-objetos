@@ -22,3 +22,4 @@ $cuenta = new cuentaBancaria($nroCuentaIngresado, $dniIngresado, $saldoActual,$i
 $cuenta->actualizarSaldo();
 
 echo $cuenta;
+

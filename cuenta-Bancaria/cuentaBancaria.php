@@ -54,7 +54,7 @@ class cuentaBancaria{
 
 
     public function actualizarSaldo(){
-        $this->setSaldoActual($this->getSaldoActual() + $this->getInteresAnual() /self ::diasAnio);
+        $this->setSaldoActual($this->getSaldoActual() + $this->getInteresAnual() / 365);
     }
 
 
@@ -72,7 +72,7 @@ class cuentaBancaria{
         
         $seRetiro = false;
 
-        if ( $cant > 0 && $this->getSaldoActual()>0 && $cant < $this->getSaldoActual()){
+        if ( $cant > 0 && $this->getSaldoActual()>0 && $cant <= $this->getSaldoActual()){
             $this->setSaldoActual($this->getSaldoActual() - $cant);
             $seRetiro = true;
         }
