@@ -3,7 +3,7 @@
 include_once "cuenta.php";
 
 
-class cajaAhorro extends Cuenta{
+class cajaAhorro extends cuenta{
     public function __construct($numeroCuenta, $saldo, $titular) {
         parent::__construct($numeroCuenta, $saldo, $titular);
     }
